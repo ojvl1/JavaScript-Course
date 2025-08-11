@@ -6,11 +6,11 @@
   <body>
     <script>
       const age = 45;
-      const isHoliday = true;
+      const isHoliday = false;
 
-      if ((isHoliday === false) && age <= 6 || age >= 65) {
+      if ((age <= 6 || age >= 65) && !isHoliday) {
         console.log('Discount');
-      } else  {
+      } else {
         console.log('No discount');
       }
     </script>
