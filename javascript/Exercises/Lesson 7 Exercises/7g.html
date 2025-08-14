@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Functions Practice</title>
+  </head>
+  <body>
+    <script>
+      function milesToKm(length) {
+        const formula = length * 1.6;
+        return formula;
+      }
+
+      function kmToMiles(length) {
+        const formula = length * 1.6;
+        return formula;
+      }
+
+      function convertLength(length, from, to) {
+        if (from === 'km' && to === 'miles') {
+          const convertion = kmToMiles(length);
+          return `${convertion} miles`;
+        } else if (from === 'miles' && to === 'km') {
+          const convertion = milesToKm(length);
+          return `${convertion} km`;
+        } else if (from === to) {
+          return `${length} ${from}`;
+        }
+      }
+
+      console.log(convertLength(50, 'miles', 'km'));
+      console.log(convertLength(32, 'km', 'miles'));
+      console.log(convertLength(50, 'km', 'km'));
+    </script>
+  </body>
+</html>

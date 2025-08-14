@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Functions Practice</title>
+  </head>
+  <body>
+    <script>
+      function milesToKm(length) {
+        const formula = length * 1.6;
+        return formula;
+      }
+
+      function kmToMiles(length) {
+        const formula = length * 1.6;
+        return formula;
+      }
+
+      function milesToFeet(length) {
+        const formula = length * 5280;
+        return formula;
+      }
+
+      function kmToFeet(length){
+        const formula = length * 3281;
+        return formula;
+      }
+
+      function convertLength(length, from, to) {
+        if (from === 'km' && to === 'miles') {
+          const convertion = kmToFeet(length);
+          return `${convertion}} miles`;
+        } else if (from === 'miles' && to === 'km') {
+          const convertion = milesToKm(length);
+          return `${convertion} km`;
+        } else if (from === 'km' && to === 'ft') {
+          const convertion = kmToFeet(length);
+          return `${convertion} ft`;
+        } else if (from === 'miles' && to === 'ft') {
+          const convertion = milesToFeet(length);
+          return `${convertion} miles`;
+        } else if (from, to !== 'km', 'miles', 'ft') {
+          console.log(`Invalid unit: ${from}`);
+        } else if (from === to) {
+          return `${length} ${from}`;
+        }
+      }
+
+      console.log(convertLength(5, 'lbs', 'lbs'));
+      console.log(convertLength(5, 'miles', 'ft'));
+      console.log(convertLength(5, 'km', 'ft'));
+    </script>
+  </body>
+</html>

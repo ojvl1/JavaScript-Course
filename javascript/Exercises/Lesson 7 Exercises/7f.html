@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Functions Practice</title>
+  </head>
+  <body>
+    <script>
+      function fahrenheitFormula(degrees) {
+        const toFahrenheit = (degrees * 9 / 5) + 32;
+        return toFahrenheit;
+      }
+
+      function celsiusFormula(degrees) {
+        const toCelsius = (degrees - 32) * 5 / 9;
+        return toCelsius;
+      }
+
+      function convertTemperature(degrees, unit) {
+        if (unit === 'C') {
+          const convertion = fahrenheitFormula(degrees);
+          return `${convertion}F`;
+        } else if (unit === 'F') {
+          const convertion = celsiusFormula(degrees);
+          return `${convertion}C`;
+        }
+      }
+
+      console.log(convertTemperature(25, 'C'));
+      console.log(convertTemperature(86, 'F'));
+    </script>
+  </body>
+</html>
