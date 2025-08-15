@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Objects Practice</title>
+  </head>
+  <body>
+    <script>
+        const product1 = {
+          name: 'macbook air',
+          price: 1000
+        };
+
+        const product2 = {
+          name: 'macbook mini',
+          price: 1500
+        };
+
+      function comparePrice(product1, product2) {
+        const lessPrice = product1.price < product2.price ? product1.price : product2.price;
+        return lessPrice;
+      }
+      console.log(comparePrice(product1, product2));
+    </script>
+  </body>
+</html>
