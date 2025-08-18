@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Booleans and If-Statements</title>
+  </head>
+  <body>
+    <button onclick="
+      playGame('heads')
+    ">heads</button>
+    <button onclick="
+      playGame('tails')
+    ">tails</button>
+    <script>
+      function playGame(guess) {
+        const coin = Math.random()
+        const result = coin < 0.5 ? 'heads' : 'tails';
+        const winOrLose = guess === result ? 'You win!' : 'You lose!';
+        console.log(winOrLose);
+      }
+    </script>
+  </body>
+</html>
