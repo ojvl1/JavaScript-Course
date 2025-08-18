@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM Practice</title>
+  </head>
+  <body>
+    <input class="js-name-input" placeholder="Name">
+    <button onclick="
+      const inputElement = document.querySelector('.js-name-input');
+      document.querySelector('.js-message')
+        .innerHTML = `Your name is: ${inputElement.value}`;
+    " onkeydown="
+      
+    ">Submit</button>
+    <p class="js-message"></p>
+  </body>
+</html>
