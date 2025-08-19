@@ -4,14 +4,27 @@
     <title>DOM Practice</title>
   </head>
   <body>
-    <input class="js-name-input" placeholder="Name">
+    <input class="myInput" placeholder="Name">
     <button onclick="
-      const inputElement = document.querySelector('.js-name-input');
-      document.querySelector('.js-message')
-        .innerHTML = `Your name is: ${inputElement.value}`;
-    " onkeydown="
-      
+    showName();
     ">Submit</button>
-    <p class="js-message"></p>
+    <p class="result"></p>
+
+    <script>      
+      function showName() {
+        let inputElement = document.getElementById('myInput');
+        let inputValue = inputElement.value;
+        let resultParagraph = document.querySelector('.result');
+        resultParagraph.innerHTML = 'Your Name is: ' + inputValue;
+      }
+
+      let inputElement = document.getElementById('myInput');
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+          showName();
+        }
+      });
+    </script>
   </body>
 </html>
