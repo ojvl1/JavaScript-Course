@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <p class="show-calculation"></p>
+
+    <p>
+      <button onclick="
+        updateCalculator('1');
+        showCalculation();
+      ">1</button>
+      <button onclick="
+        updateCalculator('2');
+        showCalculation();
+      ">2</button>
+      <button onclick="
+        updateCalculator('3');
+        showCalculation();
+      ">3</button>
+      <button onclick="
+        updateCalculator(' + ');
+        showCalculation();
+      ">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculator('4');
+        showCalculation();
+      ">4</button>
+      <button onclick="
+        updateCalculator('5');
+        showCalculation();
+      ">5</button>
+      <button onclick="
+        updateCalculator('6');
+        showCalculation();
+      ">6</button>
+      <button onclick="
+        updateCalculator(' - ');
+        showCalculation();
+      ">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculator('7');
+        showCalculation();
+      ">7</button>
+      <button onclick="
+        updateCalculator('8');
+        showCalculation();
+      ">8</button>
+      <button onclick="
+        updateCalculator('9');
+        showCalculation();
+      ">9</button>
+      <button onclick="
+        updateCalculator(' * ');
+        showCalculation();
+      ">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculator('0');
+        showCalculation();
+      ">0</button>
+      <button onclick="
+        updateCalculator('.');
+        showCalculation();
+      ">.</button>
+      <button onclick="
+        calculation = eval(calculation);
+        showCalculation();
+      ">=</button>
+      <button onclick="
+        updateCalculator(' / ');
+        showCalculation();
+      ">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculation = '';
+        showCalculation();
+
+        localStorage.setItem('calculation', calculation);
+      ">Clear</button>
+    </p>
+
+    <script>
+      let calculation = localStorage.getItem('calculation') || '';
+
+      function updateCalculator(value) {
+          calculation += value;
+
+          localStorage.setItem('calculation', calculation);
+        }
+
+        function showCalculation() {
+          document.querySelector('.show-calculation').innerHTML = calculation;
+        }
+    </script>
+  </body>
+</html>
