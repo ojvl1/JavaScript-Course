@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML, CSS and JS Together Practice</title>
+    <style>
+      .off-game, .off-music,
+      .off-tech {
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .is-toggled {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        cursor: pointer; 
+      }
+    </style>
+  </head>
+  <body>
+    <button class="off-game js-game" onclick="
+      gamingOnButton();
+    ">Gaming</button>
+    <button class="off-music js-music" onclick="
+      musicOnButton();
+    ">Music</button>
+    <button class="off-tech js-tech" onclick="
+      techOnButton();
+    ">Tech</button>
+    <script>
+      function gamingOnButton() {
+        const gamingButton = document.querySelector('.js-game');
+        if (!gamingButton.classList.contains('is-toggled')) {
+          gamingButton.classList.add('is-toggled');
+        } else {
+          gamingButton.classList.remove('is-toggled');
+        }
+      }
+
+      function musicOnButton() {
+        const musicButton = document.querySelector('.js-music');
+        if (!musicButton.classList.contains('is-toggled')) {
+          musicButton.classList.add('is-toggled');
+        } else {
+          musicButton.classList.remove('is-toggled');
+        }
+      }
+
+      function techOnButton() {
+        const techButton = document.querySelector('.js-tech');
+        if (!techButton.classList.contains('is-toggled')) {
+          techButton.classList.add('is-toggled');
+        } else {
+          techButton.classList.remove('is-toggled');
+        }
+      }
+    </script>
+  </body>
+</html>
