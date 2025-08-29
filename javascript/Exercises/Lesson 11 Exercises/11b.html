@@ -8,13 +8,12 @@
   <body>
     <script>
       function getLastValue(array) {
-        for(let i = 0; i <= array.length - 1; i++) {
-          console.log(array[i]);
-        }
+        const lastIndex = array.length - 1;
+        return array[lastIndex];
       }
 
-      getLastValue([1, 20, 22, 24, 5]);
-      getLastValue(['hi', 'hello', 'good']);
+      console.log(getLastValue([1, 20, 22, 24, 5]));
+      console.log(getLastValue(['hi', 'hello', 'good']));
     </script>
   </body>
 </html>
