@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Loops Practice Part 2</title>
+  </head>
+  <body>
+    <script>
+      function findIndex(array, word) {
+        let index = -1;
+
+        for(let i = 0; i < array.length; i++) {
+          if(array[i] === word) {
+            index = i;
+            break;
+          }
+        }
+        return index;
+      }
+
+      console.log(findIndex(['green', 'red', 'blue', 'red'], 'red'));
+      console.log(findIndex(['green', 'red', 'blue', 'red'], 'yellow'));
+    </script>
+  </body>
+</html>
