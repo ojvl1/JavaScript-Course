@@ -8,25 +8,34 @@
   <body>
     <script>
       function findIndex(array, word) {
-        let index = -1;
-
         for(let i = 0; i < array.length; i++) {
           if(array[i] === word) {
-            index = i;
-            break;
+            return i;
           }
         }
-        return index;
+        return -1;
       }
 
       function unique(array) {
-        let uniqueArray = [];
+        const result = [];
 
-        
+        for(let i = 0; i < array.length; i++) {
+          const word = array[i];
+
+          // Using the findIndex() function from above, we
+          // can check if the string is already in the
+          // result array. If it's not in the result array
+          // (index is -1), then add it to the result array.
+          if(findIndex(result, word) === -1) {
+            result.push(word);
+          }
+        }
+
+        return result;
       }
 
-      console.log(findIndex(['green', 'red', 'blue', 'red'], 'red'));
-      console.log(findIndex(['green', 'red', 'blue', 'red'], 'yellow'));
+      console.log(unique(['green', 'red', 'blue', 'red']));
+      console.log(unique(['red', 'green', 'green', 'red']));
     </script>
   </body>
 </html>
