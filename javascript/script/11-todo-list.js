@@ -50,4 +50,4 @@ function addTodo() {
   inputElement.value = '';
 
   renderTodoList();
-}2
+}
