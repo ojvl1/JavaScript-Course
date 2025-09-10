@@ -6,22 +6,34 @@
     <title>App</title>
   </head>
   <body>
-    <button class="js-add-button" onclick="
-      messages++;
-    ">Add</button>
-    <button class="js-remove-button" onclick="
-      messages--;
-    ">Remove</button>
+    <button class="js-add-button">Add</button>
+    <button class="js-remove-button">Remove</button>
     <script>
       let messages = 2;
 
-        setInterval(function() {
-          if(document.title === 'App') {
-            document.title = `(${messages}) New messages`;
-          } else {
-            document.title = 'App';
-          }
-        }, 1000);
+      document.querySelector('.js-add-button')
+        .addEventListener('click', () => {
+          setInterval(() => {
+            if(document.title === 'App') {
+              document.title = `(${messages}) New messages`;
+            } else {
+              document.title = 'App';
+            }
+          }, 1000);
+          messages++;
+        });
+        
+        document.querySelector('.js-remove-button')
+          .addEventListener('click', () => {
+            setInterval(() => {
+              if(document.title === 'App') {
+                document.title = `(${messages}) New messages`;
+              } else {
+                document.title = 'App';
+              }
+            }, 1000);
+            messages--;
+          });
     </script>
   </body>
 </html>

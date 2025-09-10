@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Functions Part 2</title>
+  </head>
+  <body>
+    <script>
+      let eggRemoved = 0;
+
+      function removeEgg(foods) {
+        return foods.filter(food => {
+          if(food === 'egg' && eggRemoved < 2) {
+            eggRemoved++;
+            return false;
+          }
+
+          return true;
+        });
+      }
+
+      console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+    </script>
+  </body>
+</html>
